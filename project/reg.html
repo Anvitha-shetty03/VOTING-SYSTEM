@@ -1,0 +1,192 @@
+<html>
+<head>
+<title>Online Voting System-Registration</title>
+
+</head>
+<body>
+<style>
+#address{
+width:30%;
+}
+#imagepath{
+border:2px solid black;
+border-radius:5px;
+padding:10px;
+width:30%;
+}
+#role{
+border:2px solid black;
+border-radius:5px;
+padding:10px;
+width:30%;
+}
+#role select{
+border-radius:5px;
+padding :10px;
+}
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: lightblue;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#headerSection {
+    background-color: #343a40;
+    color: white;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#bodysection {
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+h1, h3 {
+    margin: 0;
+    padding-bottom: 20px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="password"],
+input[type="file"],
+textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#address {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#imagepath {
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    width: calc(100% - 20px);
+    box-sizing: border-box;
+}
+
+#role {
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    width: calc(100% - 20px);
+    box-sizing: border-box;
+}
+
+#role select {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button.registration-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button.registration-btn:hover {
+    background-color: #0056b3;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #ddd;
+    margin: 20px 0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+</style>
+<center>
+<div id="headerSection">
+<h1>Online Voting System</h1>
+</div>
+<hr>
+<div id="bodysection">
+<h3>Registration</h3>
+<form action="reg.php"method="POST"enctype="multipart/form-data">
+<input type="text" name="name" placeholder="Enter name" required><br>
+<input type="number" name="mobile" placeholder="Enter number" required><br>
+<input type="password" name="password" placeholder="Enter password" required><br>
+<input type="password" name="cpassword" placeholder="Confirm password" required><br>
+<input id="address" name="address" placeholder="Enter address" required><br>
+<div id="imagepath">
+Uplopad image:<input type="file" name="photo">
+</div>
+<br>
+<div id="role">	
+Select your role:<select name="role">
+<option value="1">Voter</option>
+<option value="2">Group</option>
+</select>
+</div>
+<br>
+<button class="registration-btn">Register</button><br><br>
+Already user?<a href="log.html">Login here</a>
+</form>
+</div>
+</center>
+</body>
+</html>
